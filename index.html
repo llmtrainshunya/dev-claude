@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Unit Converter</h1>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="temperature" role="tab" aria-selected="true">Temperature</button>
+      <button class="tab" data-tab="length" role="tab" aria-selected="false">Length</button>
+      <button class="tab" data-tab="weight" role="tab" aria-selected="false">Weight</button>
+    </div>
+
+    <section class="panel active" id="temperature" role="tabpanel">
+      <div class="field">
+        <input type="number" id="temperature-input" class="value-input" value="0">
+        <select id="temperature-from" class="unit-select">
+          <option value="c">Celsius (°C)</option>
+          <option value="f">Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+      </div>
+      <div class="arrow">&#8595;</div>
+      <div class="field">
+        <input type="text" id="temperature-output" class="value-output" readonly>
+        <select id="temperature-to" class="unit-select">
+          <option value="c">Celsius (°C)</option>
+          <option value="f" selected>Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="panel" id="length" role="tabpanel">
+      <div class="field">
+        <input type="number" id="length-input" class="value-input" value="1">
+        <select id="length-from" class="unit-select">
+          <option value="m">Meters (m)</option>
+          <option value="km">Kilometers (km)</option>
+          <option value="ft">Feet (ft)</option>
+          <option value="mi">Miles (mi)</option>
+        </select>
+      </div>
+      <div class="arrow">&#8595;</div>
+      <div class="field">
+        <input type="text" id="length-output" class="value-output" readonly>
+        <select id="length-to" class="unit-select">
+          <option value="m">Meters (m)</option>
+          <option value="km">Kilometers (km)</option>
+          <option value="ft" selected>Feet (ft)</option>
+          <option value="mi">Miles (mi)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="panel" id="weight" role="tabpanel">
+      <div class="field">
+        <input type="number" id="weight-input" class="value-input" value="1">
+        <select id="weight-from" class="unit-select">
+          <option value="g">Grams (g)</option>
+          <option value="kg">Kilograms (kg)</option>
+          <option value="oz">Ounces (oz)</option>
+          <option value="lb">Pounds (lb)</option>
+        </select>
+      </div>
+      <div class="arrow">&#8595;</div>
+      <div class="field">
+        <input type="text" id="weight-output" class="value-output" readonly>
+        <select id="weight-to" class="unit-select">
+          <option value="g">Grams (g)</option>
+          <option value="kg" selected>Kilograms (kg)</option>
+          <option value="oz">Ounces (oz)</option>
+          <option value="lb">Pounds (lb)</option>
+        </select>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
